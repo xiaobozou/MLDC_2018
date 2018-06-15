@@ -1,4 +1,4 @@
 # MLDC_2018
-MLDC, the full name is Mocked LISA Data Analysis, aiming to develop pipeline that can cover the signal detection 
-and parameter estimation of LISA project. And this is MLDC summer school held in AMSS, Beijing from 5th,June to 
-15th,June, espectially for newcomers.  
+MLDC, the full name is Mocked LISA Data Analysis, aiming to develop pipeline that can cover the signal detection and parameter estimation of LISA project. And this is MLDC summer school held in AMSS, Beijing from 5th,June to  15th,June, espectially for newcomers, given by Dr.Mohanty. The school is the extension of the Dr.mohanty 's winter school last year, December, itp, beijing, see https://github.com/mohanty-sd/LDACSchool for details. 
+
+Compared with that in the winter schools, more labs are covered in this summer school, which is better for newcomers to get to the area of GW data analysis quickly. Noted that the code here cover all the basic functions used in both LIGO and LISA, so it will be easy for you to extend the code in your own project, we have rooms for TDI and orbit.    
