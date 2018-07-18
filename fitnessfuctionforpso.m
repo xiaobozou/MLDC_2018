@@ -1,5 +1,4 @@
 function [fitVal,varargout] = fitnessfuctionforpso(xVec,params)
-%GW WhiteDwarf
 %template   Paper:findchirp
 [nrows,~]=size(xVec);
 fitVal = zeros(nrows,1);

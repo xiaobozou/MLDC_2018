@@ -1,4 +1,6 @@
-function [q,q0]=qfunction(w0,phi0,alpha,delta,tbar,Sn,f_plus,f_cross) % template funvtion
+function [q,q0]=qfunction(w0,phi0,alpha,delta,tbar,Sn,f_plus,f_cross) 
+%template function, the first output is normalized using function
+%"innerproduct", where the second is not. 
 % %tabr and Sn are column vectors
 phi=phifunction(w0,alpha,delta,tbar);%vector
 phi1=phi1function(f_plus,f_cross);%vector

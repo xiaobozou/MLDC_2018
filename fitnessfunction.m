@@ -9,6 +9,7 @@ e_cross=ex'*ey+ey'*ex;
 f_plus=1/2*(D11*e_plus(1,1)+D22*e_plus(2,2)+D33*e_plus(3,3))+D12*e_plus(1,2)+D13*e_plus(1,3)+D23*e_plus(2,3);
 f_cross=1/2*(D11*e_cross(1,1)+D22*e_cross(2,2)+D33*e_cross(3,3))+D12*e_cross(1,2)+D13*e_cross(1,3)+D23*e_cross(2,3);
 
+%calculate futnessfunction
 qbar1=qfunction(w0,0,alpha,delta,tbar,Sn,f_plus,f_cross);%two template functions
 qbar0=qfunction(w0,pi/2,alpha,delta,tbar,Sn,f_plus,f_cross);
 f=innerproduct(ybar,qbar1,Sn)^2+innerproduct(ybar,qbar0,Sn)^2;

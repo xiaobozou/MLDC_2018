@@ -1,11 +1,12 @@
-%This is the main file of the final lab
+%This is the main file of the final lab.
+%including: 
 %-----------------generate signal-----------------
 A=1e-22;
 w0=0.001*2*pi;
 phi0=pi/2;
 alpha=pi/6;
 delta=pi/6;
-Fs=1/180;  %fullfill w0/(2*pi)<Fs/2
+Fs=1/60;  %fullfill w0/(2*pi)<Fs/2
 n=floor(31536000*Fs);
 % Sbar=zeros(n,1);
 % ybar=zeros(n,1);

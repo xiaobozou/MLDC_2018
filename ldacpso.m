@@ -46,7 +46,7 @@ function returnData=ldacpso(fitfuncHandle,nDim,varargin)
 % Light weight version of a PSO code used in PTA data analysis.
 
 popsize = 40;
-maxSteps = 200;
+maxSteps = 5000;
 c1=2;
 c2=2;
 max_initial_velocity = 0.5;

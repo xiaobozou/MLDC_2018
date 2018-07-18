@@ -1,15 +1,16 @@
 function[s]=signal(A,w0,phi0,alpha,delta,tbar)
-%-------------------get detector tensor vectors----------------------------------
-%calcuata fplus fcross vectors first
+%generate signal
 T=31536000;
 w=2*pi/T;
+
+%vectirize
 coswtVec = cos(w*tbar);
 sinwtVec = sin(w*tbar);
 cos2Vec=coswtVec.^2;
 sin2Vec=sinwtVec.^2;
 cossinVec=coswtVec.*sinwtVec;
 
-%calculate R=R1'R2'R1
+%have calculated R=R1'R2'R1 first, elements as below
 R11=cos2Vec*1/2+sin2Vec;
 R12=cossinVec*1/2;
 R13=-cossinVec;
@@ -26,12 +27,16 @@ r2=[-1/2,sqrt(3)/2,0]';
 r3=[-1/2,-sqrt(3)/2,0]';
 n10=(r1-r2)/sqrt(3);
 n20=(r2-r3)/sqrt(3);
+
+%vectorized n1 and n2
 n11=R11*n10(1)+R12*n10(2)+R13*n10(3);
 n12=R21*n10(1)+R22*n10(2)+R23*n10(3);
 n13=R31*n10(1)+R32*n10(2)+R33*n10(3);
 n21=R11*n20(1)+R12*n20(2)+R13*n20(3);
 n22=R21*n20(1)+R22*n20(2)+R23*n20(3);
 n23=R31*n20(1)+R32*n20(2)+R33*n20(3);
+
+%detector tensor
 D11=n11.^2-n21.^2;
 D12=n11.*n12-n21.*n22;
 D13=n11.*n13-n21.*n23;
@@ -42,7 +47,7 @@ D23=n12.*n13-n22.*n23;
 %D32=D23;
 D33=n13.^2-n23.^2;
 
-%__________________calculate fplus and fcross vectors__________________________
+%-----------------------calculate fplus and fcross vectors---------
 %calculate ecross and eplus
 ex=[sin(alpha) -cos(alpha) 0];
 ey=[-cos(alpha)*sin(delta) -sin(alpha)*sin(delta) cos(delta)];
